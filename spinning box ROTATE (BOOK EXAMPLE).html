@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Animation</title>
+  <style>
+    #animated-box {
+      margin-top: 50px;
+      margin-left: 50px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation: spin 2s infinite linear;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="animated-box"></div>
+
+</body>
+</html>
+
+<!----🔍 Step-by-Step  Explanation:
+1. #animated-box { ... }
+Ye CSS selector hai jo us element ko target karta hai jiska id="animated-box" hai.
+
+2. animation: spin 2s infinite linear;
+spin — ye animation ka naam hai (jo @keyframes mein define kiya gaya).
+
+2s — har animation cycle 2 seconds mein complete hoti hai.
+
+infinite — animation kabhi rukta nahi, hamesha repeat hoti rehti hai.
+
+linear — animation ki speed barabar rehti hai (no acceleration or deceleration).
+
+3. @keyframes spin { ... }
+Ye animation ka motion define karta hai.
+
+from (0%): start point – rotate(0deg)
+
+to (100%): end point – rotate(360deg)
+
+Iska matlab box complete round (ghoomta) karega.>
+
+
+
+🔄 CSS Animation Components:
+Property	Kaam
+animation-name	Kis animation ko use karna
+animation-duration	Kitne seconds/lifetime mein complete ho
+animation-iteration-count	Kitni baar repeat ho
+animation-timing-function	Smoothness ya effect (ease, linear, etc.)
+animation-delay	Kitni der baad animation start ho
+animation-direction	Forward ya alternate

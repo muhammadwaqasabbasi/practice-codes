@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Translate Y Animation</title>
+  <style>
+    #box-translateY {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 50px;
+      animation: moveY 2s infinite alternate;
+    }
+
+    @keyframes moveY {
+      from { transform: translateY(0); }
+      to { transform: translateY(100px); }
+    }
+  </style>
+</head>
+<body>
+  <div id="box-translateY"></div>
+</body>
+</html>

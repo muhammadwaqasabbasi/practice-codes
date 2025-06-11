@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Doctor's Visit Appointments</title>
+  <style>
+    table {
+      border: 2px solid lightgray;
+      border-collapse: collapse; 
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: lightblue;
+      color: white;
+    }
+
+    tr:nth-child(odd) {
+      background-color: gray;
+    }
+
+    #footnote {
+      font-size: 12px;
+      animation: highlight 2s ease-in-out alternate infinite;
+    }
+
+    @keyframes highlight {
+      from { background-color: transparent; }
+      to { background-color: yellow; }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Doctor's Visit Appointments</h2>
+
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Doctor</th>
+    </tr>
+    <tr>
+      <td>2025-06-10</td>
+      <td>10:00 AM</td>
+      <td>Dr. Ahmed</td>
+    </tr>
+    <tr>
+      <td>2025-06-12</td>
+      <td>11:30 AM</td>
+      <td>Dr. Sara</td>
+    </tr>
+    <tr>
+      <td>2025-06-15</td>
+      <td>02:00 PM</td>
+      <td>Dr. Bilal</td>
+    </tr>
+  </table>
+
+  <p id="footnote">
+    *Appointments are subject to availability and may change without notice.
+  </p>
+
+</body>
+</html>
+
+<!---- 
+
+Ye code Doctor's Appointment Table banata hai jisme:
+
+Table styling hai (border, padding, alignment)
+
+Row colors alternate hain
+
+Aur footnote pe animation hai (background color baar baar change hota hai)
+
+
+  border-collapse: collapse;
+  border-collapse se border tight aur single line jaisa ban jaata hai.
+
+
+
+    tr:nth-child(odd) {
+    background-color: gray;
+  }
+Har odd-numbered row (1st, 3rd, 5th, ...) ka background gray hoga.
+
+
+
+  #footnote {
+    font-size: 12px;
+    animation: highlight 2s ease-in-out alternate infinite;
+  }
+ID footnote wale element ka font chhota hoga.
+
+Usme highlight animation apply hogi:
+
+2s = har cycle 2 seconds ki hogi
+
+ease-in-out = smoothly start/end
+
+alternate = ek baar forward, ek baar reverse
+
+infinite = kabhi rukay ga nahi
+
+
+
+
+
+
+  @keyframes highlight {
+    from { background-color: transparent; }
+    to { background-color: yellow; }
+  }
+Ye animation define karta hai:
+
+from: start transparent
+
+to: end yellow
+
+
+
+
+Learning Points in Simple Words:
+✅ table, th, td — table banaate hain aur uski formatting set karte hain.
+
+✅ nth-child(odd) — odd rows ka background change karta hai.
+
+✅ @keyframes — animation define karta hai (kya change hona chahiye).
+
+✅ animation — kisi bhi element par animation lagata hai (ID, class ya tag pe).
+
+✅ alternate infinite — animation har taraf chalein aur kabhi na rukay.

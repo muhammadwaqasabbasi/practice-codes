@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Translate X Animation</title>
+  <style>
+    #box-translateX {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      margin: 50px;
+      animation: moveX 2s infinite alternate;
+    }
+
+    @keyframes moveX {
+      from { transform: translateX(0); }
+      to { transform: translateX(100px); }
+    }
+  </style>
+</head>
+<body>
+  <div id="box-translateX"></div>
+</body>
+</html>

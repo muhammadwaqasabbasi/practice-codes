@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Scale Animation</title>
+  <style>
+    #box-scale {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      margin: 50px;
+      animation: grow 2s infinite alternate;
+    }
+
+    @keyframes grow {
+      from { transform: scale(1); }
+      to { transform: scale(1.5); }
+    }
+  </style>
+</head>
+<body>
+  <div id="box-scale"></div>
+</body>
+</html>

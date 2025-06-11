@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smile Line Animation</title>
+  <style>
+    /* ==== Animation for ID (#smileId) ==== */
+    #smileId {
+      font-size: 24px;
+      color: blue;
+      animation-name: bounceText;
+      animation-duration: 1s;
+     
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+    }
+
+    /* Define keyframes for ID animation */
+    @keyframes bounceText {
+      from {
+        transform: translateY(0px);
+        color: blue;
+      }
+      to {
+        transform: translateY(-20px);
+        color: green;
+      }
+    }
+
+    
+
+
+  </style>
+</head>
+<body>
+
+  <!-- ID wale element (Bounce Effect) -->
+  <p id="smileId">😊 Smile Line with ID Animation</p>
+
+ 
+
+</body>
+</html>
