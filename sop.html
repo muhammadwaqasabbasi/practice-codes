@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping List</title>
+</head>
+<body>
+  <h2>Shopping List</h2>
+
+  <!-- Input box aur button -->
+  <input id="itembox" placeholder="Enter item">
+  <button onclick="addItem()">Add</button>
+
+  <!-- Table -->
+  <table id="tablelist" border="1" style="margin-top:10px;">
+    <tr>
+      <th>Item</th>
+      <th>Action</th>
+    </tr>
+  </table>
+
+  <script>
+    // Add item function
+    function addItem() {
+      let item = document.getElementById("itembox").value;
+
+      if (item === "") {
+        alert("Please enter an item!");
+        return;
+      }
+
+      let table = document.getElementById("tablelist");
+      let row = table.insertRow();  // Add new row
+
+      let cell1 = row.insertCell(0); // First column: item
+      let cell2 = row.insertCell(1); // Second column: action button
+
+      cell1.innerHTML = item;
+
+      // Create Remove button
+      let removeBtn = document.createElement("button");
+      removeBtn.innerHTML = "Remove";
+      removeBtn.onclick = function () {
+        table.deleteRow(row.rowIndex); // Delete current row
+      };
+
+      cell2.appendChild(removeBtn);
+
+      // Clear input box after adding
+      document.getElementById("itembox").value = "";
+    }
+  </script>
+</body>
+</html>
