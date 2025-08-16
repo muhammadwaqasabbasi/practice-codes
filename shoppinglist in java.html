@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping List</title>
+</head>
+<body>
+  <h1>My Shopping List</h1>
+  <ul id="shoppingList"></ul>
+
+  <script>
+    const shoppingItems = ["Milk", "Bread", "Eggs", "Apples"];
+
+    function addItem() {
+      const newItem = document.getElementById("newItemInput").value;
+      shoppingItems.push(newItem);
+      updateList();
+    }
+
+    function updateList() {
+      const listElement = document.getElementById("shoppingList");
+      listElement.innerHTML = "";
+
+      for (let i = 0; i < shoppingItems.length; i++) {
+        const item = shoppingItems[i];
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        listElement.appendChild(listItem);
+      }
+      
+    }
+
+    updateList();
+  </script>
+
+  <br>
+  <input type="text" id="newItemInput" placeholder="Enter new item">
+  <button onclick="addItem()">Add Item</button>
+</body>
+</html>
+
+
+
+<!--
+🧠 How It Works (Explained Simply):
+🔹 shoppingItems array:
+const shoppingItems = ["Milk", "Bread", "Eggs", "Apples"];
+Stores the initial list of items to display.
+
+
+addItem() function:
+Takes the value from the input field.
+Adds it to the shoppingItems array.
+Calls updateList() to refresh the list on the screen.
+
+
+🔹 updateList() function:
+Clears the current list (innerHTML = "").
+Loops through the array and creates a new <li> for each item.
+Appends the items to the <ul> element with ID shoppingList.
+
+
+    <input type="text" id="newItemInput" placeholder="Enter new item">
+<button onclick="addItem()">Add Item</button>
+Lets the user enter a new shopping item and
+ add it to the list dynamically.
+-->
