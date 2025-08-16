@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <h2>shoping cart</h2>
+        <input id="itembox" type="text" placeholder="enter item">
+        <button onclick="additem()">add item </button>
+
+
+<table id="updateitem" border="1" style="margin-top:10px; border-collapse: collapse; width:300px; text-align:center;">
+    </table>
+
+        <script>
+            let list=[];
+
+                function additem()
+                {
+                    let item=document.getElementById("itembox").value.trim();
+                    if(item==="")return;
+                    list.push(item)
+                    updateitem();
+                    document.getElementById("itembox").value="";
+
+
+                }
+                function updateitem()
+                {
+                    let table=document.getElementById("updateitem");
+                    table.innerHTML=""
+                    let headerrow =document.createElement("tr");
+                     let snHead = document.createElement("th");
+                     snHead.innerHTML = "Sr. No.";
+                     headerrow.appendChild(snHead);
+                    let headercell=document.createElement("th");
+                    headercell.innerHTML="list of item"
+                    headerrow.appendChild(headercell)
+                    table.appendChild(headerrow)
+
+
+                    for(let k=0;k<list.length;k++)
+
+                    {
+                        let row=document.createElement("tr")
+
+                        
+                        let snCell = document.createElement("td");
+                        snCell.innerHTML = k + 1;
+                        row.appendChild(snCell);
+                        let cell=document.createElement("td")
+                         cell.innerHTML=list[k];
+                        row.appendChild(cell)
+                        table.appendChild(row)
+
+
+
+                    }
+                }
+
+        </script>
+    </body>
+</html>
